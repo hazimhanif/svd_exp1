@@ -83,7 +83,7 @@ The results are as below (30 epochs unless stated):
 
 * The authors didn't mention about how they performed their prediction in terms of number of classes. The provided datasets have 5 diffferent output classes with each of the class being a logical value `TRUE` or `FALSE`. Therefore, it is unknown how the authors actually managed to achieve the **binary detection** results tabulated in the paper. To overcome this, we implemented logical `OR` operation across all the output columns for all the observations in the dataset. The output of this operation is stored a new column called `combine`. 
 
-* The authors mentioned of using random gaussian noise to each embedded representations. It is **unclear** whether the random gaussian noise is added as a _*layer on top of the input embeddings*_ or as the *weights of each embeddings*. The use of **random gaussian noise** is questionable as it implies randomness in the architecture of the model. The authors have to justify the use of randomness in the experiment since it is a technical concept experiment that evaluates its applicability and performance on real projects. Why use randomize it in the first place?
+* The authors mentioned of using random gaussian noise to each embedded representations. It is **unclear** whether the random gaussian noise is added as a _*layer on top of the input embeddings*_ or as the *weights of each embeddings*. 
 
 * Since we know that pseudo-random number depends on the seed value of a random number generator. This greatly relates with random gaussian noise generated for the embeddings. Therefore, replicating the experiments to achieve the same results is quite impossible as the **seed number** is not mentioned in the paper.
 
