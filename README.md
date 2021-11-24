@@ -13,6 +13,15 @@
 * Functions may have more than one detected CWE each.
 * Python 3.6.9 and Tensorflow 2.0.0
 
+### Important note
+
+The dataset might have been updated by the owner.  
+The `functionSource` column now, contains a bytes string object.  
+We need to decode it to a literal string.  
+You can do that by mapping:  
+`mydf['functionSource'] = mydf['functionSource'].str.decode("utf-8")`
+
+
 ### Datasets  
 
 Will be added if required.  
